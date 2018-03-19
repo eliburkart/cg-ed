@@ -20,7 +20,7 @@ body {
 }
 .cg-ed {
   width: 70%;
-  color: #f4c2c2;
+  color: #f9f1f1;
 }
 .students {
   color: #f4c2c2;
@@ -37,8 +37,10 @@ body {
 }
 
 hr{
-	border-top: 2px dashed #f4c2c2;
+  border-top: 1px dotted #005e5e;
 }
+hr.style2 {
+	border-top: 3px double #f4c2c2;
 
 }
 
