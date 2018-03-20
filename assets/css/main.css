@@ -108,6 +108,28 @@ hr.style2 {
   font-family: 'Special Elite', cursive;
 
 }
+.course-wrapper {
+  display: flex;
+  flex-flow: nowrap;
+  flex-direction: row;
+  background-color: #f6e5d3;
+  width: 25%;
+  margin: 15px;
+  padding: 5px;
+  font-family: 'Special Elite', cursive;
+}
+.course-name {
+  width: 45%;
+  padding: 10px;
+}
+.vl {
+  border-left: 2px solid black;
+  height: 100px;
+}
+.course-info {
+  width:45%;
+  padding: 10px;
+}
 .image {
   width:180px;
   font-family: 'Special Elite', cursive;
