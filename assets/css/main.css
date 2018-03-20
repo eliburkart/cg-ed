@@ -108,14 +108,19 @@ hr.style2 {
   font-family: 'Special Elite', cursive;
 
 }
+.row-1 {
+  display: flex;
+  flex-flow: nowrap;
+  flex-direction: row;
+}
 .course-wrapper {
   display: flex;
   flex-flow: nowrap;
   flex-direction: row;
   background-color: #f6e5d3;
-  width: 25%;
+  width: 45%;
   margin: 15px;
-  padding: 5px;
+  padding: 10px;
   font-family: 'Special Elite', cursive;
 }
 .course-name {
@@ -190,6 +195,10 @@ hr.style2 {
   width: 50%;
   text-align: center;
 }
+
+.vl-wrapper {
+  padding: 10px;
+}
 #courses {
   text-transform: uppercase;
   text-align: center;
@@ -199,6 +208,9 @@ hr.style2 {
 }
 #foot {
   justify-content: center;
-  color: #f9f1f1;
+  color: #f4c2c2;
   margin-bottom: 0;
+  padding: 20px;
+  width: 100%;
+  font-family: 'Rancho', cursive;
 }
