@@ -6,6 +6,17 @@ body {
   margin: 0;
   background-color: 	#f9f1f1;
 }
+a {
+  color: #f4c2c2;
+  text-decoration: none;
+}
+a:visited {
+  color: #f9f1f1;
+  text-decoration: none;
+}
+.active {
+  color: orange;
+}
 /* flexxy menu */
 .menu {
   display: flex;
@@ -14,25 +25,26 @@ body {
   background-color: #000;
   margin: 10px;
   padding: 30px;
-  font-family: 'Nixie One', cursive;
+  font-family: 'Muli', sans-serif;
   font-size: 1.2em;
   width: 100%;
 }
 .cg-ed {
   width: 70%;
-  color: #f9f1f1;
+  color: #428bca;
+  font-weight: 700;
 }
 .students {
-  color: #f4c2c2;
+  color: #428bca;
   width: 10%;
 }
 .teachers {
-  color: #f9f1f1;
+  color: #428bca;
   width: 10%;
 }
 
 .classes {
-  color: #f9f1f1;
+  color: #428bca;
   width: 10%;
 }
 
@@ -56,6 +68,7 @@ hr.style2 {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  justify-content: center;
 }
 .incomplete {
   display: flex;
@@ -84,10 +97,37 @@ hr.style2 {
 }
 .image-wrapper {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  font-family: 'Special Elite', cursive;
+  text-decoration: underline;
+}
+.image-wrapper-t {
+  display: flex;
+  justify-content: center;
+    font-size: 1.25em;
+  font-family: 'Special Elite', cursive;
+
 }
 .image {
   width:180px;
+  font-family: 'Special Elite', cursive;
+  text-decoration: underline;
+}
+.teacher-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: #f6e5d3;
+  width: 25%;
+  margin: 15px;
+  padding: 20px;
+
+}
+.email {
+  justify-content: center;
+}
+.box-2 {
+    padding: 30px;
 }
 #rounded {
   border-radius: 75%;
@@ -99,12 +139,10 @@ hr.style2 {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 .student-name {
   font-size: 1.25em;
   text-decoration: underline;
-
   overflow: hidden;
 }
 .grade-wrapper {
@@ -116,19 +154,29 @@ hr.style2 {
 }
 .grades {
   width: 50%;
-  text-align: center;
-  padding: 10px;
-  align-items: center;
 
+  align-items: center;
+}
+#boldy {
+  font-family: 'Special Elite', cursive;
+  font-weight: 600;
+}
+#notboldy {
+  font-family: 'Special Elite', cursive;
 }
 .enrolled {
   width: 50%;
   text-align: center;
-
 }
 #courses {
   text-transform: uppercase;
   text-align: center;
   text-decoration: underline;
   margin-bottom: 1em;
+
+}
+#foot {
+  justify-content: center;
+  color: #f9f1f1;
+  margin-bottom: 0;
 }
