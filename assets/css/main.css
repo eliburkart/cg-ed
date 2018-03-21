@@ -1,43 +1,98 @@
 /* font-family: 'Montserrat', sans-serif; */
+
 /* font-family: 'Inconsolata', monospace; */
+
 /*  font-family: 'Nixie One', cursive;*/
+
 /* font-family: 'Special Elite', cursive; */
+
 body {
   margin: 0;
-  background-color: 	#f9f1f1;
+  background-color: #f9f1f1;
 }
+
 a {
   color: #f4c2c2;
   text-decoration: none;
 }
+
 a:visited {
   color: #f9f1f1;
   text-decoration: none;
 }
+
+hr {
+  border-top: 1px dotted #005e5e;
+}
+
+hr.style2 {
+  border-top: 3px double #f4c2c2;
+}
+
+.vl {
+  border-left: 2px solid black;
+  height: 100px;
+  padding: 10px;
+}
+
 .active {
   color: orange;
 }
-/* flexxy menu */
+
+.image {
+  width: 180px;
+  font-family: 'Special Elite', cursive;
+  text-decoration: underline;
+}
+
+/* gives images circular framing */
+
+#rounded {
+  border-radius: 75%;
+  padding: 5px;
+}
+
+/*STUDENTS flex box wrapper  */
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: #f6e5d3;
+  width: 25%;
+  margin: 15px;
+  padding: 25px;
+  font-family: 'Special Elite', cursive;
+}
+
+.course-list {
+  list-style: none;
+}
+
+/* flexxy MENU */
+
 .menu {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   background-color: #000;
-  margin: 10px;
   padding: 30px;
   font-family: 'Muli', sans-serif;
   font-size: 1.2em;
   width: 100%;
 }
+
 .cg-ed {
   width: 70%;
   color: #428bca;
   font-weight: 700;
 }
+
 .students {
   color: #428bca;
   width: 10%;
 }
+
 .teachers {
   color: #428bca;
   width: 10%;
@@ -48,13 +103,9 @@ a:visited {
   width: 10%;
 }
 
-hr{
-  border-top: 1px dotted #005e5e;
-}
-hr.style2 {
-	border-top: 3px double #f4c2c2;
+/*end MENU  */
 
-}
+/* page wrapper */
 
 .page {
   display: flex;
@@ -63,83 +114,79 @@ hr.style2 {
   width: 100%;
   margin: auto;
 }
+
+/* Wraps Student Card Rows */
+
 .row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
   justify-content: center;
 }
+
+/*for rows that do not meet standard of 3 cards  */
+
 .incomplete {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  align-items: center;
   justify-content: center;
 }
-.wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  background-color: #f6e5d3;
-  width: 25%;
-  margin: 15px;
-  padding: 20px;
-  font-family: 'Special Elite', cursive;
-}
-.hole {
-  width: 100%;
-  padding-top: 10px;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
-}
-.image-wrapper {
-  display: flex;
-  justify-content: center;
-  font-family: 'Special Elite', cursive;
-  text-decoration: underline;
-}
-.image-wrapper-t {
-  display: flex;
-  justify-content: center;
-    font-size: 1.25em;
-  font-family: 'Special Elite', cursive;
 
-}
+/* wraps rows of 3 course card */
+
 .row-1 {
   display: flex;
   flex-flow: nowrap;
   flex-direction: row;
 }
+
+/* wraps text around image on student page */
+
+/* .image-wrapper {
+  display: flex;
+  justify-content: center;
+  font-family: 'Special Elite', cursive;
+  text-decoration: underline;
+} */
+
+/* slightly different text wrapper for teacher page */
+
+.image-wrapper-t {
+  display: flex;
+  justify-content: center;
+  font-size: 1.25em;
+  font-family: 'Special Elite', cursive;
+}
+
+/* COURSE card outer wrapper */
+
 .course-wrapper {
   display: flex;
   flex-flow: nowrap;
   flex-direction: row;
   background-color: #f6e5d3;
   width: 45%;
-  margin: 15px;
   padding: 10px;
+  margin: 15px;
   font-family: 'Special Elite', cursive;
 }
+
+/*COURSE cards inner */
+
 .course-name {
   width: 45%;
   padding: 10px;
 }
-.vl {
-  border-left: 2px solid black;
-  height: 100px;
-}
+
 .course-info {
-  width:45%;
+  width: 45%;
   padding: 10px;
 }
-.image {
-  width:180px;
-  font-family: 'Special Elite', cursive;
-  text-decoration: underline;
-}
+
+/* TEACHER card outer wrapper */
+
 .teacher-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -148,30 +195,33 @@ hr.style2 {
   width: 25%;
   margin: 15px;
   padding: 20px;
-
 }
+
+/* TEACHER card inner */
+
 .email {
   justify-content: center;
 }
+
 .box-2 {
-    padding: 30px;
+  padding: 30px;
 }
-#rounded {
-  border-radius: 75%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 2px;
-}
+
+/* STUDENT card outer wrapper */
+
 .student-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+/* STUDENT card inner  */
+
 .student-name {
-  font-size: 1.25em;
+  font-size: 1em;
   text-decoration: underline;
-  overflow: hidden;
 }
+
 .grade-wrapper {
   display: flex;
   width: 100%;
@@ -179,33 +229,33 @@ hr.style2 {
   padding: 10px;
   font-size: .75em;
 }
+
 .grades {
   width: 50%;
-
-  align-items: center;
 }
+
+.enrolled {
+  width: 50%;
+}
+
 #boldy {
   font-family: 'Special Elite', cursive;
   font-weight: 600;
 }
+
 #notboldy {
   font-family: 'Special Elite', cursive;
 }
-.enrolled {
-  width: 50%;
-  text-align: center;
-}
 
-.vl-wrapper {
-  padding: 10px;
-}
 #courses {
   text-transform: uppercase;
   text-align: center;
   text-decoration: underline;
   margin-bottom: 1em;
-
 }
+
+/* FOOTER styling */
+
 #foot {
   justify-content: center;
   color: #f4c2c2;
