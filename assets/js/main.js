@@ -10,13 +10,13 @@ var semester = ['Winter 2017', 'Summer 2018', 'Fall 2018'];
 var courses = [
     ['Roman History','History'],
     ['Successful Negotiation', 'Communication'],
+    ['Improving CommunicationSkills', 'Communication'],
+    ['Teamwork Skills', 'Communication'],
     ['Transcendental Meditation', 'Health'],
     ['The Art of the Forced Unexpected Reboot', 'Computer Science'],
     ['History of Tnetennba', 'Computer Sceience'],
     ['Financial Accounting', 'Business'],
     ['Managerial Economics', 'Business'],
-    ['Improving CommunicationSkills', 'Communication'],
-    ['Teamwork Skills', 'Communication']
     ['Herbology', 'Magic'],
     ['Charms and Potions', 'Magic']
 ]
@@ -62,15 +62,39 @@ var courses = [
 // STEP 2: Create a function that filters course by departments//
 // This function should take 2 parameter a course array and a department. The function should return a new array filled with courses that are ONLY in the department specified in the parameter.
 // note: to test that this works… I would suggest calling the function and then console.log the result to make sure it is filtering as expected.
+// function findCourse() {
+// for (var i=0, len=courses.length; i < len; i++) {
+//   for (var j=0, len2=courses[i].length; j < len2; j++) {
+//     return  (courses[j].includes('Communication')) {
+//       console.log('Communication: '+ courses[i]);
+//     }
+//     else if (courses[j].includes('History'))  {
+//       console.log('History: '+ courses[i]);
+//     }
+//   }
+// }
+// }
+
+//
 function findCourse() {
-for (var i=0, len=courses.length; i < len; i++) {
-  for (var j=0, len2=courses[i].length; j< len2; j++) {
 
+	for (var i=0, len=courses.length; i < len; i++) {
 
-  }
+		if (courses[i][1] =='Communication') {
+			console.log('Communication: '+ courses[i][0]);
 
-  while (courses[j] == 'Communication') {
-    console.log(courses[i]);
-  }
+		}
+
+		else if (courses[i][1] == 'History')  {
+
+			console.log('History: '+ courses[i][0]);
+
+		}
+    else  {
+    	console.log('Business: '+ courses[i][0]);
+    }
+	}
 
 }
+
+console.log(findCourse());
