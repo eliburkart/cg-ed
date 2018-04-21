@@ -31,7 +31,7 @@ var courses = [
 // console.log("Courses: " + courses);
 
 
-//STEP 2: Turn teacher’s avg rating calculation into a function
+//TODO 2: Turn teacher’s avg rating calculation into a function
 
 // function getAvgRating(userReview) {
 //   rating.push(userReview);
@@ -59,23 +59,10 @@ var courses = [
 //    prompt('Please enter a rating between 0 - 5');
 // }
 
-// STEP 2: Create a function that filters course by departments//
+// TODO 2: Create a function that filters course by departments//
 // This function should take 2 parameter a course array and a department. The function should return a new array filled with courses that are ONLY in the department specified in the parameter.
 // note: to test that this works… I would suggest calling the function and then console.log the result to make sure it is filtering as expected.
-// function findCourse() {
-// for (var i=0, len=courses.length; i < len; i++) {
-//   for (var j=0, len2=courses[i].length; j < len2; j++) {
-//     return  (courses[j].includes('Communication')) {
-//       console.log('Communication: '+ courses[i]);
-//     }
-//     else if (courses[j].includes('History'))  {
-//       console.log('History: '+ courses[i]);
-//     }
-//   }
-// }
-// }
 
-//
 function findCourse() {
 
 	for (var i=0, len=courses.length; i < len; i++) {
@@ -85,16 +72,50 @@ function findCourse() {
 
 		}
 
-		else if (courses[i][1] == 'History')  {
+		else if (courses[i][1] == 'Magic')  {
 
-			console.log('History: '+ courses[i][0]);
+			console.log('Magic: '+ courses[i][0]);
 
 		}
+    else if (courses[i][1] == 'History')  {
+
+      console.log('History: '+ courses[i][0]);
+
+    }
+    else if (courses[i][1] == 'Health')  {
+
+      console.log('Health: '+ courses[i][0]);
+
+    }
+    else if (courses[i][1] == 'Business')  {
+
+      console.log('Business: '+ courses[i][0]);
+
+    }
     else  {
-    	console.log('Business: '+ courses[i][0]);
+    	console.log('Computer Science: '+ courses[i][0]);
     }
 	}
 
 }
 
 console.log(findCourse());
+
+
+
+//TODO 3: Putting it all together
+// This prompt should ask the user what department they are looking for a course in. The user should enter a department name. Then…
+// 1) check that the user entered a valid department name…
+// 2) if they did not, prompt them again…
+//3) if they did, use the function you create above to filter the course list
+//4) AND alert (the js function like prompt) back to the user the course titles that they can choose from.
+
+var userPrompt = prompt("What department are you looking for?");
+for (var i=0, len=courses.length; i < len; i++)
+  if (userPrompt == courses[i][1]){
+    alert('You have selected: '+ findCourse(userPrompt));
+}
+    else {
+    alert(userPrompt  + 'is not a valid class name.  Try again');
+
+    }
