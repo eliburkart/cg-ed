@@ -104,18 +104,16 @@ console.log(findCourse());
 
 
 //TODO 3: Putting it all together
-// This prompt should ask the user what department they are looking for a course in. The user should enter a department name. Then…
+// This prompt should ask the user what department they are looking for a course in. The user should enter a department name.
+var userCourse = prompt("What department are you looking for?");
 // 1) check that the user entered a valid department name…
+for (var i=0, len=courses.length; i < len; i++)
+  if (userCourse == courses[i][1]){
+    alert(userCourse  + 'is not a valid class name.  Try again');
+    }
 // 2) if they did not, prompt them again…
+else  if (userCourse == courses[i][1]){
+// return 'You have selected: '+ findCourse(userCourse));
+}
 //3) if they did, use the function you create above to filter the course list
 //4) AND alert (the js function like prompt) back to the user the course titles that they can choose from.
-
-var userPrompt = prompt("What department are you looking for?");
-for (var i=0, len=courses.length; i < len; i++)
-  if (userPrompt == courses[i][1]){
-    alert('You have selected: '+ findCourse(userPrompt));
-}
-    else {
-    alert(userPrompt  + 'is not a valid class name.  Try again');
-
-    }
