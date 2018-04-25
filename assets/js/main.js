@@ -110,11 +110,11 @@ var userCourse = prompt("What department are you looking for?");
 //3) if they did, use the function you create above to filter the course list
 //4) AND alert (the js function like prompt) back to the user the course titles that they can choose from.
 for (var i=0, len=courses.length; i < len; i++)
-  if (userCourse == courses[i][1]){
-    console.log(userCourse  + ' Offerings: ' + courses[i][0]);
+  if (courses[i][1] == userCourse){
+    console.log(userCourse + ' Offerings: ' + courses[i][0]);
     }
 
 // 2) if they did not, prompt them again…
-else  if (userCourse !== courses[i][1]){
-    alert('That is not a valid department.');
-}
+// else  if (userCourse !== courses[i][1]){
+//     alert('That is not a valid department.');
+// }
