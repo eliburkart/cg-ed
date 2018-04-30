@@ -62,42 +62,42 @@ var courses = [
 // // TODO 2: Create a function that filters course by departments//
 // // This function should take 2 parameter a course array and a department. The function should return a new array filled with courses that are ONLY in the department specified in the parameter.
 // // note: to test that this works… I would suggest calling the function and then console.log the result to make sure it is filtering as expected.
+// //
+// function findCourse() {
 //
-// // function findCourse() {
-// //
-// // 	for (var i=0, len=courses.length; i < len; i++) {
-// //
-// // 		if (courses[i][1] =='Communication') {
-// // 			console.log('Communication: '+ courses[i][0]);
-// //
-// // 		}
-// //
-// // 		else if (courses[i][1] == 'Magic')  {
-// //
-// // 			console.log('Magic: '+ courses[i][0]);
-// //
-// // 		}
-// //     else if (courses[i][1] == 'History')  {
-// //
-// //       console.log('History: '+ courses[i][0]);
-// //
-// //     }
-// //     else if (courses[i][1] == 'Health')  {
-// //
-// //       console.log('Health: '+ courses[i][0]);
-// //
-// //     }
-// //     else if (courses[i][1] == 'Business')  {
-// //
-// //       console.log('Business: '+ courses[i][0]);
-// //
-// //     }
-// //     else  {
-// //     	console.log('Computer Science: '+ courses[i][0]);
-// //     }
-// // 	}
-// //
-// // }
+// 	for (var i=0, len=courses.length; i < len; i++) {
+//
+// 		if (courses[i][1] =='Communication') {
+// 			console.log('Communication: '+ courses[i][0]);
+//
+// 		}
+//
+// 		else if (courses[i][1] == 'Magic')  {
+//
+// 			console.log('Magic: '+ courses[i][0]);
+//
+// 		}
+//     else if (courses[i][1] == 'History')  {
+//
+//       console.log('History: '+ courses[i][0]);
+//
+//     }
+//     else if (courses[i][1] == 'Health')  {
+//
+//       console.log('Health: '+ courses[i][0]);
+//
+//     }
+//     else if (courses[i][1] == 'Business')  {
+//
+//       console.log('Business: '+ courses[i][0]);
+//
+//     }
+//     else  {
+//     	console.log('Computer Science: '+ courses[i][0]);
+//     }
+// 	}
+//
+// }
 // //
 // // console.log(findCourse());
 //
@@ -125,9 +125,29 @@ var courses = [
 // TODO STEP 1: Prompting User
 // We need to prompt the user twice. One time for the student’s college graduation year (2018) and one for the student’s college graduation month (May or December).
 // If the user’s input is not valid, remember to re-prompt them :)   (https://javascript.info/ifelse  check this out)
-let userYear = prompt('What year will you graduate?');
-var userMonth = prompt('Enter graduation month, please.');
+// let userYear = prompt('What year will you graduate?');
+// regular functions are like SQL like %_
+gradYears = [2018,2019,2020,2021]
+var userYear=prompt('Enter graduation year, please.')
+for (var i = 0; i < gradYears.length; i++)
+if (userYear == gradYears[i]) {
+  alert('Your graduation year is ' + userYear);
+}
+else {
+  prompt('Please enter a valid year.')
+}
+ //recursive function here - so TODO create a funcion
 
+
+// var userMonth = prompt('Enter graduation month, please.');
+// if (userMonth = ' '){
+//   alert('Please enter a month.');
+// }
 // STEP 2: Figuring Out if the User is in High School or College
 
-if userYear ==
+// if userYear ==
+
+
+
+// TODO STEP 3: Welcoming Some Students Write 2 anonymous functions and store then in variables called… welcomeCollegeStudent
+// and welcomeHsStudent. Each will take one parameter, the student’s class (like Freshman, Sophomore… etc).
