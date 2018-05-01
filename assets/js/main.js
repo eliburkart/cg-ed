@@ -1,25 +1,25 @@
-
-var teacherName = ['Sally Jones', 'Squidward'];
-var deptName = ['Physics', 'Communication', 'English', 'Business'];
-var rating = [3.4, 5.0, 4.2];
-var avgRating = ((3.4 + 5.0 + 4.2)/3).toFixed(1);
-var students = ['Jessica Jones', 'Morris Moss', 'Bernard Black', 'Manny Bianco', 'Hermionie Grainger'];
-var courses = ['History', 'Art', 'Communications', 'Magic'];
-var GPA = [3.2, 4.0, 3.8, 4.0, 2];
-var semester = ['Winter 2017', 'Summer 2018', 'Fall 2018'];
-var courses = [
-    ['Roman History','History'],
-    ['Successful Negotiation', 'Communication'],
-    ['Improving CommunicationSkills', 'Communication'],
-    ['Teamwork Skills', 'Communication'],
-    ['Transcendental Meditation', 'Health'],
-    ['The Art of the Forced Unexpected Reboot', 'Computer Science'],
-    ['History of Tnetennba', 'Computer Sceience'],
-    ['Financial Accounting', 'Business'],
-    ['Managerial Economics', 'Business'],
-    ['Herbology', 'Magic'],
-    ['Charms and Potions', 'Magic']
-]
+//
+// var teacherName = ['Sally Jones', 'Squidward'];
+// var deptName = ['Physics', 'Communication', 'English', 'Business'];
+// var rating = [3.4, 5.0, 4.2];
+// var avgRating = ((3.4 + 5.0 + 4.2)/3).toFixed(1);
+// var students = ['Jessica Jones', 'Morris Moss', 'Bernard Black', 'Manny Bianco', 'Hermionie Grainger'];
+// var courses = ['History', 'Art', 'Communications', 'Magic'];
+// var GPA = [3.2, 4.0, 3.8, 4.0, 2];
+// var semester = ['Winter 2017', 'Summer 2018', 'Fall 2018'];
+// var courses = [
+//     ['Roman History','History'],
+//     ['Successful Negotiation', 'Communication'],
+//     ['Improving CommunicationSkills', 'Communication'],
+//     ['Teamwork Skills', 'Communication'],
+//     ['Transcendental Meditation', 'Health'],
+//     ['The Art of the Forced Unexpected Reboot', 'Computer Science'],
+//     ['History of Tnetennba', 'Computer Sceience'],
+//     ['Financial Accounting', 'Business'],
+//     ['Managerial Economics', 'Business'],
+//     ['Herbology', 'Magic'],
+//     ['Charms and Potions', 'Magic']
+// ]
 
 // // console.log("Teacher: " + teacherName);
 // // console.log("Department: " + deptName);
@@ -98,8 +98,8 @@ var courses = [
 // 	}
 //
 // }
-// //
-// // console.log(findCourse());
+//
+// console.log(findCourse());
 //
 //
 //
@@ -125,24 +125,66 @@ var courses = [
 // TODO STEP 1: Prompting User
 // We need to prompt the user twice. One time for the student’s college graduation year (2018) and one for the student’s college graduation month (May or December).
 // If the user’s input is not valid, remember to re-prompt them :)   (https://javascript.info/ifelse  check this out)
-// let userYear = prompt('What year will you graduate?');
 // regular functions are like SQL like %_
-gradYears = [2018,2019,2020,2021]
-var userYear=prompt('Enter graduation year, please.')
-for (var i = 0; i < gradYears.length; i++)
-if (userYear == gradYears[i]) {
-  alert('Your graduation year is ' + userYear);
-}
-else {
-  prompt('Please enter a valid year.')
-}
- //recursive function here - so TODO create a funcion
 
 
-// var userMonth = prompt('Enter graduation month, please.');
-// if (userMonth = ' '){
-//   alert('Please enter a month.');
+var  userYear = prompt('Enter graduation year, please.');
+var gradYears = [2017, 2018, 2019, 2020, 2021,2022,2023,2024,2025,2026,2027];
+
+var getGradYear = function() {
+
+    	for (var i=0, len=gradYears.length; i < len; i++)  {
+
+        console.log("for index: " + i);
+        console.log(userYear);
+        console.log(gradYears[i]);
+
+        if (userYear == gradYears[i]) {
+          alert('Your graduation year is ' + userYear);
+          }
+
+        if else (userYear !== gradYears[i]) {
+
+            console.log(getGradYear(userYear));
+            }
+
+        // else { alert('Incorrect, try again!')
+        //   // getGradYear(useryear);
+        //   }
+          }
+}
+getGradYear(userYear);
+
+// var gradYears = [['2017', '2018', '2019', '2020', '2021'],['2022','2023','2024','2025','2026','2027']]
+// var userYear = prompt('What year will you graduate?');
+// function  getGradYear() {
+//
+//     for (var i=0, len=gradYears.length; i < len; i++) {
+//       if (gradYears[i][0] == userYear) {
+//        console.log('You selected ' + userYear);
+//       }
+//
+//       // else if (userYear !== gradYears[i]){
+//       //         console.log('Incorrect. Try again.')
+//       //
+//       //       }
+//
+//     }
+//
 // }
+
+
+//recursive function here - so TODO create a funcion
+
+// var gradMonth = ['May','December']
+// var userMonth = prompt('Enter graduation month, please.');
+// function getGradMonth() {
+// for (var i=0; i<gradMonth.length; i++) {
+// if (userMonth == gradMonth[i]){
+//   alert('Graduating in ' + gradMonth);
+//   }
+// }
+
 // STEP 2: Figuring Out if the User is in High School or College
 
 // if userYear ==
