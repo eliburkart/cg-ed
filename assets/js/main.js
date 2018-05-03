@@ -133,20 +133,20 @@ var gradYears = [2017, 2018, 2019, 2020, 2021,2022,2023,2024,2025,2026,2027];
 
 var getGradYear = function() {
 
-    	for (var i=0, len=gradYears.length; i < len; i++)  {
-
+    	// for (var i=0, len=gradYears.length; i < len; i++)  {
+for (var i = 0; i < gradYears.length; i++){
         console.log("for index: " + i);
         console.log(userYear);
         console.log(gradYears[i]);
 
-        if (userYear == gradYears[i]) {
-          alert('Your graduation year is ' + userYear);
+        if (userYear >= 2017 && userYear < 2022) {
+          console.log('Your high school graduation year is ' + userYear);
           }
 
-        if else (userYear !== gradYears[i]) {
-
-            console.log(getGradYear(userYear));
-            }
+        // if else (userYear !== gradYears[i]) {
+        //
+        //     console.log(getGradYear(userYear));
+        //     }
 
         // else { alert('Incorrect, try again!')
         //   // getGradYear(useryear);
