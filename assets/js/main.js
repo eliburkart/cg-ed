@@ -118,76 +118,80 @@
 // // else  if (userCourse !== courses[i][1]){
 // //     alert('That is not a valid department.');
 // // }
-
-
-
-
-// TODO STEP 1: Prompting User
-// We need to prompt the user twice. One time for the student’s college graduation year (2018) and one for the student’s college graduation month (May or December).
-// If the user’s input is not valid, remember to re-prompt them :)   (https://javascript.info/ifelse  check this out)
-// regular functions are like SQL like %_
-
-
-var  userYear = prompt('Enter graduation year, please.');
-var gradYears = [2017, 2018, 2019, 2020, 2021,2022,2023,2024,2025,2026,2027];
-
-var getGradYear = function() {
-
-    	// for (var i=0, len=gradYears.length; i < len; i++)  {
-for (var i = 0; i < gradYears.length; i++){
-        console.log("for index: " + i);
-        console.log(userYear);
-        console.log(gradYears[i]);
-
-        if (userYear >= 2017 && userYear < 2022) {
-          console.log('Your high school graduation year is ' + userYear);
-          }
-
-        // if else (userYear !== gradYears[i]) {
-        //
-        //     console.log(getGradYear(userYear));
-        //     }
-
-        // else { alert('Incorrect, try again!')
-        //   // getGradYear(useryear);
-        //   }
-          }
-}
-getGradYear(userYear);
-
-// var gradYears = [['2017', '2018', '2019', '2020', '2021'],['2022','2023','2024','2025','2026','2027']]
-// var userYear = prompt('What year will you graduate?');
-// function  getGradYear() {
+// 
+// var  userYear = prompt('Enter graduation year, please.');
+// var gradYears = [2017, 2018, 2019, 2020, 2021,2022,2023,2024,2025,2026,2027];
 //
-//     for (var i=0, len=gradYears.length; i < len; i++) {
-//       if (gradYears[i][0] == userYear) {
-//        console.log('You selected ' + userYear);
+// var getGradYear = function() {
+//
+//     	// for (var i=0, len=gradYears.length; i < len; i++)  {
+// for (var i = 0; i < gradYears.length; i++){
+//         // console.log("for index: " + i);
+//         // console.log(userYear);
+//         // console.log(gradYears[i]);
+//
+//         if (userYear >= 2017 && userYear < 2022) {
+//           alert('Your high school graduation year is ' + userYear);
+//           return false;
+//           }
+//
+//         else {
+//           alert('Incorrect, try again!')
+//           return false;
 //       }
-//
-//       // else if (userYear !== gradYears[i]){
-//       //         console.log('Incorrect. Try again.')
-//       //
-//       //       }
-//
-//     }
-//
 // }
-
-
-//recursive function here - so TODO create a funcion
-
-// var gradMonth = ['May','December']
+// }
+// // getGradYear(userYear);
+//
+//
+// var gradMonth = ['May','December'];
 // var userMonth = prompt('Enter graduation month, please.');
 // function getGradMonth() {
 // for (var i=0; i<gradMonth.length; i++) {
 // if (userMonth == gradMonth[i]){
-//   alert('Graduating in ' + gradMonth);
+//   alert('Graduating in ' + userMonth + ' '+ userYear);
+//   return false;
 //   }
+//   else {
+//     alert('Incorrect, try again!')
+//     return false;
 // }
+// }
+// }
+// // getGradMonth();
+// // STEP 2: Figuring Out if the User is in High School or College
+// hsGrads = [2018,2019];
+// function welcomeStudent() {
+// for (var i = 0; i < hsGrads.length; i++) {
+//   if (getGradYear () = hsGrads[i]) {
+//     alert('Welcome, you high school grad, you!!');
+//   return false;
+// }
+// else {
+//   alert('Welcome to university!');
+//   return false;
+// }
+// }
+// }
+// getGradYear();
+// getGradMonth();
+// welcomeStudent();
 
-// STEP 2: Figuring Out if the User is in High School or College
-
-// if userYear ==
+var gradMonth = ['May', 'December'];
+var userMonth = prompt('Enter graduation month, please');
+var userYear = prompt('Enter graduation year, please');
+var hsGrads = [2018,2019,2020,2021];
+var collegeGrads = [2022,2023,2024,2025,2026];
+for (var i=0; i< collegeGrads.length; i++) {
+    console.log(collegeGrads[i]);
+collegeGrads.forEach('Welcome college grad! You are graduating in ' + userMonth + 'of ' + userYear);
+  return false;
+}
+}
+// TODO STEP 1: Prompting User
+// We need to prompt the user twice. One time for the student’s college graduation year (2018) and one for the student’s college graduation month (May or December).
+// If the user’s input is not valid, remember to re-prompt them :)   (https://javascript.info/ifelse  check this out)
+// regular functions are like SQL like %_
 
 
 
