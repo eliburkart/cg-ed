@@ -118,7 +118,7 @@
 // // else  if (userCourse !== courses[i][1]){
 // //     alert('That is not a valid department.');
 // // }
-// 
+//
 // var  userYear = prompt('Enter graduation year, please.');
 // var gradYears = [2017, 2018, 2019, 2020, 2021,2022,2023,2024,2025,2026,2027];
 //
@@ -180,14 +180,33 @@
 var gradMonth = ['May', 'December'];
 var userMonth = prompt('Enter graduation month, please');
 var userYear = prompt('Enter graduation year, please');
-var hsGrads = [2018,2019,2020,2021];
-var collegeGrads = [2022,2023,2024,2025,2026];
-for (var i=0; i< collegeGrads.length; i++) {
-    console.log(collegeGrads[i]);
-collegeGrads.forEach('Welcome college grad! You are graduating in ' + userMonth + 'of ' + userYear);
-  return false;
+var hsGrads = [
+            ['hsFrosh', 2018],
+            ['hsSoph', 2019],
+            ['hsJunior', 2020],
+            ['hsSenior', 2021]
+          ];
+var collegeGrads = [
+            ['collegeFrosh', 2022],
+            ['collegeSoph', 2023],
+            ['collegeJunior',2025],
+            ['collegeSenior',2026]
+            ];
+for (var i = 0; i < hsGrads.length; i++) {
+  for (var j = 0; j < collegeGrads.length; j++) {
+    if (collegeGrads[i][1] == userYear) {
+    alert('Welcome college grad! You are graduating in ' + userMonth + ' of ' + userYear);
+}
+else if (hsGrads[j][1] == userYear) {
+  alert('Welcome highschool grad! You are graduating in ' + userMonth + ' of ' + userYear);
+}
+else {
+  alert('Please try again');
+
+  }
 }
 }
+
 // TODO STEP 1: Prompting User
 // We need to prompt the user twice. One time for the student’s college graduation year (2018) and one for the student’s college graduation month (May or December).
 // If the user’s input is not valid, remember to re-prompt them :)   (https://javascript.info/ifelse  check this out)
