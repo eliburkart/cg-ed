@@ -215,20 +215,21 @@ var grads = [
               var userMonth = prompt('Enter graduation month, please');
               var userYear = prompt('Enter graduation year, please');
 
-    function welcomeStudent() {
+  function welcomeStudent() {
 
       if (!(userMonth == 'May' || userMonth == 'December')){
         alert('Try again!');
         return false;
 }
-
+{
            for (var i = 0; i < grads.length; i++) {
-              var graduatesClass = grads[i].isGrade;
-              if (userYear = graduatesClass)
-              alert("You will be a " + graduatesClass + " graduating in " + userMonth + " " + userYear + "!");
+              var graduatesClass = grads[i].isYear;
+              if (userYear == graduatesClass){
+              alert("You will be a " + grads[i].isGrade + " graduating in " + userMonth + " " + graduatesClass + "!");
               return false;
             }
-
+          }
+}
       alert('Please try again');
       return false;
 
