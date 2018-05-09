@@ -176,74 +176,86 @@
 // getGradYear();
 // getGradMonth();
 // welcomeStudent();
-var grads = [
-            {
-              'isYear':2018,
-              'isGrade':'Highschool Freshman'
-            },
+var grads = [{
+    'isYear': 2018,
+    'isGrade': 'Highschool Freshman'
+  },
 
-            {
-              'isYear':2019,
-              'isGrade':'Highschool Sophmore'
-            },
-            {
-              'isYear': 2020,
-              'isGrade' : 'Highschool Junior'
-            },
-            {
-              'isYear': 2021,
-              'isGrade' : 'Highschool Senior'
-            },
-            {
-              'isYear': 2022,
-              'isGrade':'College Freshman'
-            },
-            {
-              'isYear': 2023,
-              'isGrade':'College Sophmore'
-            },
-            {
-              'isYear':2025,
-              'isGrade':'College Junnior'
-            },
-            {
-              'isYear':2026,
-              'isGrade':'College Senior'
-            }
-            ];
+  {
+    'isYear': 2019,
+    'isGrade': 'Highschool Sophmore'
+  },
+  {
+    'isYear': 2020,
+    'isGrade': 'Highschool Junior'
+  },
+  {
+    'isYear': 2021,
+    'isGrade': 'Highschool Senior'
+  },
+  {
+    'isYear': 2022,
+    'isGrade': 'College Freshman'
+  },
+  {
+    'isYear': 2023,
+    'isGrade': 'College Sophmore'
+  },
+  {
+    'isYear': 2025,
+    'isGrade': 'College Junnior'
+  },
+  {
+    'isYear': 2026,
+    'isGrade': 'College Senior'
+  }
+];
 
-              var userMonth = prompt('Enter graduation month, please');
-              var userYear = prompt('Enter graduation year, please');
+var userMonth = prompt('Enter graduation month, please');
+var userYear = prompt('Enter graduation year, please');
 
-  function welcomeStudent() {
+function welcomeStudent() {
 
-      if (!(userMonth == 'May' || userMonth == 'December')){
-        alert('Try again!');
+  if ((!(userMonth == 'May' || userMonth == 'December')) || (userYear > 2026)) {
+    alert('Try again!');
+    return false;
+  } {
+    for (var i = 0; i < grads.length; i++) {
+      var graduatesClass = grads[i].isYear;
+      if (userYear == graduatesClass) {
+        alert("You will be a " + grads[i].isGrade + " graduating in " + userMonth + " " + graduatesClass + "!");
         return false;
-}
-{
-           for (var i = 0; i < grads.length; i++) {
-              var graduatesClass = grads[i].isYear;
-              if (userYear == graduatesClass){
-              alert("You will be a " + grads[i].isGrade + " graduating in " + userMonth + " " + graduatesClass + "!");
-              return false;
-            }
-          }
-}
-      alert('Please try again');
-      return false;
+      }
+    }
+  }
+  alert('Please try again');
+  return false;
 
 }
-
 
 welcomeStudent();
 
-// TODO STEP 1: Prompting User
-// We need to prompt the user twice. One time for the student’s college graduation year (2018) and one for the student’s college graduation month (May or December).
-// If the user’s input is not valid, remember to re-prompt them :)   (https://javascript.info/ifelse  check this out)
-// regular functions are like SQL like %_
 
+// TODO STEP 1: Creating Your First Object: the Teacher Object
 
+var teacher = {
+    'name': 'Squidward',
+    'department': 'Business Management',
+    'ratings': [3.4, 5, 4.2],
+    'addTeacherRating': function newRating() {
+      this.(parseInt(userReview, 10)).toFixed(2)) newRating()
+  },
+  'averageTeacherRating': getAvgRating(userReview) {
+    //what do I use this. with?
+    rating.push(userReview);
+    var sum = 0;
+    for (var i = 0; i < rating.length; i++) {
+      (sum += rating[i]);
+    }
+    console.log(sum / rating.length);
+    return sum / rating.length;
+  }
 
-// TODO STEP 3: Welcoming Some Students Write 2 anonymous functions and store then in variables called… welcomeCollegeStudent
-// and welcomeHsStudent. Each will take one parameter, the student’s class (like Freshman, Sophomore… etc).
+  // ou now need to call your addRating property on your teacher object and only pass in the userRating.
+// Also test to make sure the addRating function is still working, along with the getAvgRating function by printing
+ // out the avg rating before and after you add the new rating.
