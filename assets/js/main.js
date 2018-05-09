@@ -176,42 +176,66 @@
 // getGradYear();
 // getGradMonth();
 // welcomeStudent();
+var grads = [
+            {
+              'isYear':2018,
+              'isGrade':'Highschool Freshman'
+            },
 
-var gradMonth = ['May', 'December'];
-var userMonth = prompt('Enter graduation month, please');
-var userYear = prompt('Enter graduation year, please');
-var hsGrads = [
-            {'hsFrosh': 2018},
-            {'hsSoph': 2019},
-            {'hsJunior': 2020},
-            {'hsSenior': 2021}
-          ];
-var collegeGrads = [
-            {'collegeFrosh': 2022},
-            {'collegeSoph': 2023},
-            {'collegeJunior':2025},
-            {'collegeSenior':2026}
+            {
+              'isYear':2019,
+              'isGrade':'Highschool Sophmore'
+            },
+            {
+              'isYear': 2020,
+              'isGrade' : 'Highschool Junior'
+            },
+            {
+              'isYear': 2021,
+              'isGrade' : 'Highschool Senior'
+            },
+            {
+              'isYear': 2022,
+              'isGrade':'College Freshman'
+            },
+            {
+              'isYear': 2023,
+              'isGrade':'College Sophmore'
+            },
+            {
+              'isYear':2025,
+              'isGrade':'College Junnior'
+            },
+            {
+              'isYear':2026,
+              'isGrade':'College Senior'
+            }
             ];
 
-function wecome() {
-for (var i = 0; i < hsGrads.length; i++) {
+              var userMonth = prompt('Enter graduation month, please');
+              var userYear = prompt('Enter graduation year, please');
 
-    if (collegeGrads[i] == userYear) {
+    function welcomeStudent() {
 
-    alert('Welcome college grad! You are graduating in ' + userMonth + ' of ' + collegeGrads[i]);
-    return false;
+      if (!(userMonth == 'May' || userMonth == 'December')){
+        alert('Try again!');
+        return false;
 }
-else if (hsGrads == userYear) {
-  alert('Welcome highschool grad! You are graduating in ' + userMonth + ' of ' + userYear);
+
+           for (var i = 0; i < grads.length; i++) {
+              var graduatesClass = grads[i].isGrade;
+              if (userYear = graduatesClass)
+              alert("You will be a " + graduatesClass + " graduating in " + userMonth + " " + userYear + "!");
+              return false;
+            }
+
+      alert('Please try again');
+      return false;
+
 }
-else {
-  alert('Please try again');
 
 
-}
-}
-}
-// welcome();
+welcomeStudent();
 
 // TODO STEP 1: Prompting User
 // We need to prompt the user twice. One time for the student’s college graduation year (2018) and one for the student’s college graduation month (May or December).
