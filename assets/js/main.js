@@ -70,18 +70,100 @@ var userGradMonth = prompt('What month will you graduate?');
 // var welcomeHsStudent = ;
 // function hsGradYear()
 
-// if ((userGradMonth == 'May') || (userGradMonth == 'December')) {
-
-  hsGradYears.forEach(function(hsGradYear) {
-
-    if (((userGradMonth == 'May' || userGradMonth == 'December') && (userGradYear == 2019)))
-      console.log('Welcome, highschool freshman!');
-      console.log('You are still in highschool!')
-  });
-
+//
+// function welcomeHsStudents() {
+//     if (((userGradMonth == 'May' || userGradMonth == 'December') && (userGradYear == 2019))){
+//
+//       console.log('Welcome, highschool freshman!');
+//       console.log('You are still in highschool!');
+//     }
 // }
+// // welcomeHsStudents();
+//
+//
+// function welcomeCollegeStudents() {
+//     if (((userGradMonth == 'May' || userGradMonth == 'December') && (userGradYear == 2025))){
+//       console.log('Welcome, collge junior!');
+//     }
+// }
+// welcomeCollegeStudents();
 
 
 //Replace the console logs in these above steps with calling these functions!
-//For now, just use a “Freshman” parameter. Our next step will be to figure out which class the
-//college or high school student is in.
+// function welcomeAllStudents() {
+//   if (((userGradMonth == 'May' || userGradMonth == 'December') && ((userGradYear >= 2019) && (userGradYear < 2027)))) {
+//     welcomeHsStudents();
+//     welcomeCollegeStudents();
+//   }
+// }
+// welcomeAllStudents();
+//
+//
+// // TODO The welcomeStudentByGraduatingClass should use the grad month and year to figure out what graduating
+// // class the student is in (like Freshman, Sophomore, etc), then call the welcome function and pass the correct graduating class as a parameter to that welcome function.
+function welcomeHsStudents() {
+    if (((userGradMonth == 'May' || userGradMonth == 'December') && (userGradYear == 2019))){
+
+      console.log('Welcome, highschool freshman!');
+
+    }
+    else if (((userGradMonth == 'May' || userGradMonth == 'December') && (userGradYear == 2020))){
+
+      console.log('Welcome, highschool Sophmore!');
+
+    }
+    else if (((userGradMonth == 'May' || userGradMonth == 'December') && (userGradYear == 2021))){
+
+      console.log('Welcome, highschool Junior!');
+
+    }
+    else if (((userGradMonth == 'May' || userGradMonth == 'December') && (userGradYear == 2022))){
+
+      console.log('Welcome, highschool Senior!');
+
+    }
+}
+// welcomeHsStudents();
+
+function welcomeCollegeStudents() {
+    if (((userGradMonth == 'May' || userGradMonth == 'December') && (userGradYear == 2023))){
+
+      console.log('Welcome, college freshman!');
+
+    }
+    else if (((userGradMonth == 'May' || userGradMonth == 'December') && (userGradYear == 2024))){
+
+      console.log('Welcome, college Sophmore!');
+
+    }
+    else if (((userGradMonth == 'May' || userGradMonth == 'December') && (userGradYear == 2025))){
+
+      console.log('Welcome, college Junior!');
+
+    }
+    else if (((userGradMonth == 'May' || userGradMonth == 'December') && (userGradYear == 2026))){
+
+      console.log('Welcome, college Senior!');
+
+    }
+}
+// welcomeCollegeStudents();
+
+function welcomeAllStudents() {
+  if (((userGradMonth == 'May' || userGradMonth == 'December') && ((userGradYear >= 2019) && (userGradYear < 2027)))) {
+    welcomeHsStudents();
+    welcomeCollegeStudents();
+  }
+}
+// welcomeAllStudents();
+
+function welcomeStudentsByGraduatingClass() {
+  if (userGradYear > 2028) {
+    return;
+  }
+  if (((userGradMonth == 'May' || userGradMonth == 'December') && ((userGradYear >= 2019) && (userGradYear < 2027))))  {
+
+    welcomeHsStudents();
+}
+}
+welcomeStudentsByGraduatingClass(userGradMonth, userGradYear, welcomeAllStudents());
