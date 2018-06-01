@@ -44,16 +44,44 @@
 //TODO if user input was not empty, use grad  year to decide if in HS or College
 //console.log('You are in college.') or console.log('You are in high school.')
 var hsGradYears = ['2019', '2020', '2021', '2022'];
-var collegeGradYears = ['2023','2024','2025','2026'];
+var collegeGradYears = ['2023', '2024', '2025', '2026'];
 var userGradYear = prompt('What year will you graduate?');
 var userGradMonth = prompt('What month will you graduate?');
-while ((userGradMonth !== '') || (userGradYear !== '')){
-  if (((userGradMonth == 'May' || userGradMonth == 'December') || (userGradYear == hsGradYears[i]))) {
-    alert('You will graduate in ' + userGradMonth + ' of ' + userGradYear + ' from University!');
-    return false;
-    hsGradYears.forEach(function(userGradYear, i) {
-      console.log(i + ' : ' + ' you are high school')
+//
+// if ((userGradMonth == 'May') || (userGradMonth == 'December')) {
+//
+//   hsGradYears.forEach(function(hsGradYear) {
+//     if (((userGradMonth == 'May' || userGradMonth == 'December') && (userGradYear == hsGradYear)))
+//       console.log('You will be a high school graduate in ' + hsGradYear);
+//       return true;
+//   });
+//
+//
+//   collegeGradYears.forEach(function(collegeGradYear) {
+//    if (((userGradMonth == 'May' || userGradMonth == 'December') && (userGradYear == collegeGradYear)))
+//       console.log('You will be a college graduate in ' + collegeGradYear);
+//   });
+// }
+//TODO STEP 3: Welcoming Some Students Write 2 anonymous functions and store then in variables called…
+//welcomeCollegeStudent and welcomeHsStudent. Each will take one parameter,
+//the student’s class (like Freshman, Sophomore… etc).
 
-    })
-}
-}
+// var welcomeCollegeStudent = ;
+// var welcomeHsStudent = ;
+// function hsGradYear()
+
+// if ((userGradMonth == 'May') || (userGradMonth == 'December')) {
+
+  hsGradYears.forEach(function(hsGradYear) {
+
+    if (((userGradMonth == 'May' || userGradMonth == 'December') && (userGradYear == 2019)))
+      console.log('Welcome, highschool freshman!');
+      console.log('You are still in highschool!')
+  });
+
+// }
+
+
+//Replace the console logs in these above steps with calling these functions!
+//For now, just use a “Freshman” parameter. Our next step will be to figure out which class the
+//college or high school student is in.

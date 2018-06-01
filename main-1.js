@@ -216,7 +216,8 @@ var userYear = prompt('Enter graduation year, please');
 
 function welcomeStudent() {
 
-  if ((!(userMonth == 'May' || userMonth == 'December')) || (userYear > 2026)) {
+  if ((!(userMonth == 'May' || userMonth == 'December'))
+   || (userYear > 2026)) {
     alert('Try again!');
     return false;
   } {
