@@ -198,39 +198,6 @@ var courses = [
 // welcomeStudentsByGraduatingClass(userGradMonth, userGradYear, welcomeAllStudents());
 
 
-// //create a prompt that asks the user to review a teacher
-
-
-var teacher = {
-    name: 'Squidward',
-    department: 'Business',
-    rating: [3.8,5,1.2],
-
-     getAvgRating: function(userReview) {
-       this.rating.push(userReview);
-       var sum = 0;
-         for (var i = 0; i < this.rating.length; i++) {
-         (sum = sum + this.rating[i]);
-          }
-          console.log(sum/this.rating.length);
-       return sum / this.rating.length;
-     },
-    addRating: function(userReview) {
-    this.rating.push(userReview);
-     // addRating(userReview);
-   }
-};
-
-var userReview = prompt('We would like for you to review your teacher. Please enter a rating between 0 - 5');
-
-    if  ((userReview > 0) && (userReview <= 5)) {
-    alert('Thanks for you review! Your teacher now has an average rating of ' +  teacher.getAvgRating(parseInt(userReview, 10)).toFixed(2));
-//
-} else {
-   prompt('Please enter a rating between 0 - 5');
-}
-
-
 // ****************************************************OBJECT ASSIGMENT*****************************************************
 // TODO STEP 1: Creating Your First Object: the Teacher Object
 
@@ -240,15 +207,106 @@ var userReview = prompt('We would like for you to review your teacher. Please en
 // instead of using our old teacher variables, we are now going to use our new teacher object to make sure everything is working correctly.
 // var userReview = prompt('We would like for you to review your teacher. Please enter a rating between 0 - 5');
 
+// var teacher = {
+//     name: 'Squidward',
+//     department: 'Business',
+//     rating: [3.8,5,1.2],
+//
+//      getAvgRating: function(userReview) {
+//        this.rating.push(userReview);
+//        var sum = 0;
+//          for (var i = 0; i < this.rating.length; i++) {
+//          (sum = sum + this.rating[i]);
+//           }
+//           console.log(sum/this.rating.length);
+//        return sum / this.rating.length;
+//      },
+//     addRating: function(userReview) {
+//     this.rating.push(userReview);
+//      // addRating(userReview);
+//    }
+// };
+//
+// var userReview = prompt('We would like for you to review your teacher. Please enter a rating between 0 - 5');
+//
+//     if  ((userReview > 0) && (userReview <= 5)) {
+//     alert('Thanks for you review! Your teacher now has an average rating of ' +  teacher.getAvgRating(parseInt(userReview, 10)).toFixed(2));
+// //
+// } else {
+//    prompt('Please enter a rating between 0 - 5');
+// }
 
 
+
+// // TODO STEP 3 Create a course Object
+// var teacher = {
+//   name: 'Business Management',
+//   department: 'Business',
+//   teacher: 'Squidward',
+//   semester: 'winter',
+// }
+// var coursesObj = {
+//   name: 'Fractal Dimensions',
+//   department: 'Computer Science',
+// }
+//
+// // TODO   STEP 4: Fix the filterCourses function
+//
+// // var classDept = prompt('What class will you take?');
+// // function filterCourses() {
+// //   console.log(coursesObj.department);
+// // };
+// // filterCourses();
+//
+// // TODO STEP 5: Adding an object as a property of another object
+// var coursesObj = {
+//   name: 'Fractal Dimensions',
+//   department: 'Computer Science',
+//   teacherObj: {
+//     name: 'Business Management',
+//     department: 'Business',
+//     teacher: 'Squidward',
+//     semester: 'winter',
+//   }
+//
+// }
+// console.log(coursesObj.teacherObj.teacher);
+
+// ***********************************************PROTOTYPES*********************************************************************
 // PROTOTYPES STEP 1  This constructor should take parameters to give the Teacher properties their initial values. So for the Teacher class, we need parameters
 // for name, department, and maybe ratings (if you want to, we could also just add their ratings later with the addTeacherRating function, so
 // up to you). Then inside the Teacher Constructor function you need to set the teacher’s properties using this… like:
 //
-// function Teacher() {
-//   this.name: name;
-//   this.department: department;
-//   this.teacher: teacher;
-//   this.semester: semester;
-// }
+
+function Teacher(name, department, teacher,semester) {
+  this.name = name;
+  this.department = department;
+  this.teacher = teacher;
+  this.semester = semester;
+}
+
+Teacher.prototype.get  = function() {
+  this.rating.push(userReview);
+        var sum = 0;
+          for (var i = 0; i < this.rating.length; i++) {
+          (sum = sum + this.rating[i]);
+           }
+           console.log(sum/this.rating.length);
+        return sum / this.rating.length;
+}
+Teacher.prototype.add = function() {
+      this.rating.push(userReview);
+      // addRating(userReview);
+};
+
+
+// TODO STEP 2: Create new Teacher Instances
+var teacherSquid = new Teacher('Squidward', 'Business', 'Business Management', 'Winter', [5,4,3]);
+var teacherMoss = new Teacher('Maurice Moss', 'Computer Science', 'Unexpected Rebooting', 'Winter', [5,4.4,4.9]);
+var teacherBlack = new Teacher('Bernard Black', 'English Lit', 'History of Screaming', 'Winter', [5,4.2,2]);
+
+console.log(teacherSquid, teacherBlack, teacherMoss);
+console.log(teacherSquid.get, teacherSquid.add(1,2), teacherBlack.get,teacherBlack.add(2,3));
+
+
+// TODO STEP 3: Create Course Prototype
