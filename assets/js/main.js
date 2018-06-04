@@ -226,7 +226,7 @@ var courses = [
 //      // addRating(userReview);
 //    }
 // };
-//
+
 // var userReview = prompt('We would like for you to review your teacher. Please enter a rating between 0 - 5');
 //
 //     if  ((userReview > 0) && (userReview <= 5)) {
@@ -278,25 +278,27 @@ var courses = [
 // up to you). Then inside the Teacher Constructor function you need to set the teacher’s properties using this… like:
 //
 
-function Teacher(name, department, teacher,semester) {
+function Teacher(name, department, teacher,semester, rating) {
   this.name = name;
   this.department = department;
   this.teacher = teacher;
   this.semester = semester;
+  this.rating = rating;
 }
 
 Teacher.prototype.get  = function() {
-  this.rating.push(userReview);
+  this.rating.push();
         var sum = 0;
           for (var i = 0; i < this.rating.length; i++) {
           (sum = sum + this.rating[i]);
            }
            console.log(sum/this.rating.length);
         return sum / this.rating.length;
-}
-Teacher.prototype.add = function() {
-      this.rating.push(userReview);
+
+Teacher.prototype.add  = function(){
+      this.rating.push();
       // addRating(userReview);
+    }
 };
 
 
@@ -306,7 +308,7 @@ var teacherMoss = new Teacher('Maurice Moss', 'Computer Science', 'Unexpected Re
 var teacherBlack = new Teacher('Bernard Black', 'English Lit', 'History of Screaming', 'Winter', [5,4.2,2]);
 
 console.log(teacherSquid, teacherBlack, teacherMoss);
-console.log(teacherSquid.get, teacherSquid.add(1,2), teacherBlack.get,teacherBlack.add(2,3));
+console.log(teacherSquid.get(), teacherBlack.get());
 
 
 // TODO STEP 3: Create Course Prototype
