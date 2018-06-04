@@ -199,36 +199,36 @@ var courses = [
 
 
 // //create a prompt that asks the user to review a teacher
+
+
+var teacher = {
+    name: 'Squidward',
+    department: 'Business',
+    rating: [3.8,5,1.2],
+
+     getAvgRating: function(userReview) {
+       this.rating.push(userReview);
+       var sum = 0;
+         for (var i = 0; i < this.rating.length; i++) {
+         (sum = sum + this.rating[i]);
+          }
+          console.log(sum/this.rating.length);
+       return sum / this.rating.length;
+     },
+    addRating: function(userReview) {
+    this.rating.push(userReview);
+     // addRating(userReview);
+   }
+};
+
 var userReview = prompt('We would like for you to review your teacher. Please enter a rating between 0 - 5');
 
     if  ((userReview > 0) && (userReview <= 5)) {
     alert('Thanks for you review! Your teacher now has an average rating of ' +  teacher.getAvgRating(parseInt(userReview, 10)).toFixed(2));
-
+//
 } else {
    prompt('Please enter a rating between 0 - 5');
 }
-// var userReview = prompt('We would like for you to review your teacher. Please enter a rating between 0 - 5');
-var teacher = {
-    name: 'Squidward',
-    department: 'Business',
-    rating: [4.5,3.2,2.0,5],
-    addRating: function(userReview) {
-     this.rating.push(userReview);
-     // addTeacherRating(userReview);
-     // console.log(this.rating);
-   }   ,
-
- getAvgRating: function() {
-   // this.rating.push(userReview);
-   var sum = 0;
-     for (var i = 0; i < this.rating.length; i++) {
-     (sum += this.rating[i]);
-      }
-      // console.log(sum/this.rating.length);
-   return sum/this.rating.length;
-             },
-};
-
 
 
 // ****************************************************OBJECT ASSIGMENT*****************************************************
