@@ -32,31 +32,33 @@ var courses = [
 
 // //TODO 2: Turn teacher’s avg rating calculation into a function
 //
+// //create a prompt that asks the user to review a teacher
+// var userReview = prompt('We would like for you to review your teacher. Please enter a rating between 0 - 5');
+//
+//     if  ((userReview > 0) && (userReview <= 5)) {
+//     alert('Thanks for you review! Your teacher now has an average rating of ' +  getAvgRating(parseInt(userReview, 10)).toFixed(2));
+//
+// } else {
+//    prompt('Please enter a rating between 0 - 5');
+// }
+//
 // function getAvgRating(userReview) {
 //   rating.push(userReview);
 //   var sum = 0;
 //     for (var i = 0; i < rating.length; i++) {
-//     (sum += rating[i]);
+//     (sum = sum + rating[i]);
 //      }
 //      console.log(sum/rating.length);
 //   return sum/rating.length;
 // }
-// //
-// // //STEP 3: Create an add teacher rating function
+// // //
+// // // //STEP 3: Create an add teacher rating function
 // function addTeacherRating() {
 //   rating.push(userReview);
 // }
 //   addTeacherRating(userReview);
 //   console.log(rating);
 
-// //create a prompt that asks the user to review a teacher
-// var userReview = prompt('We would like for you to review your teacher. Please enter a rating between 0 - 5');
-//
-//     if  (userReview > 0 && userReview <= 5) {
-//     alert('Thanks for you review! Your teacher now has an average rating of ' + getAvgRating(parseInt(userReview, 10)).toFixed(2));
-// } else {
-//    prompt('Please enter a rating between 0 - 5');
-// }
 
 //TODO #1 prompt user 1. ('What year will you graduate?') & 2. ('What month will you graduate?')
 //check if answer is May or December
@@ -196,6 +198,36 @@ var courses = [
 // welcomeStudentsByGraduatingClass(userGradMonth, userGradYear, welcomeAllStudents());
 
 
+// //create a prompt that asks the user to review a teacher
+var userReview = prompt('We would like for you to review your teacher. Please enter a rating between 0 - 5');
+
+    if  ((userReview > 0) && (userReview <= 5)) {
+    alert('Thanks for you review! Your teacher now has an average rating of ' +  teacher.getAvgRating(parseInt(userReview, 10)).toFixed(2));
+
+} else {
+   prompt('Please enter a rating between 0 - 5');
+}
+// var userReview = prompt('We would like for you to review your teacher. Please enter a rating between 0 - 5');
+var teacher = {
+    name: 'Squidward',
+    department: 'Business',
+    rating: [4.5,3.2,2.0,5],
+    addRating: function(userReview) {
+     this.rating.push(userReview);
+     // addTeacherRating(userReview);
+     // console.log(this.rating);
+   }   ,
+
+ getAvgRating: function() {
+   // this.rating.push(userReview);
+   var sum = 0;
+     for (var i = 0; i < this.rating.length; i++) {
+     (sum += this.rating[i]);
+      }
+      // console.log(sum/this.rating.length);
+   return sum/this.rating.length;
+             },
+};
 
 
 
@@ -203,38 +235,20 @@ var courses = [
 // TODO STEP 1: Creating Your First Object: the Teacher Object
 
 
-var teacher = {
-    name: 'Squidward',
-    department: 'Business',
-    ratings: [4.5,3.2,2.0,5],
+// To do this you will need to change the addTeacherRating call. You now need to call your addRating
+// property on your teacher object and only pass in the userRating.
+// instead of using our old teacher variables, we are now going to use our new teacher object to make sure everything is working correctly.
+// var userReview = prompt('We would like for you to review your teacher. Please enter a rating between 0 - 5');
 
-    addRating: function(addTeacherRating){
-    this.rating.push(userReview);
-  },
 
-  getAvgRating: function() {
-    // this.rating.push(userReview);
-    var sum = 0;
-      for (var i = 0; i < this.rating.length; i++) {
-      (sum += this.rating[i]);
-       }
-       // console.log(sum/this.rating.length);
-    return sum/this.rating.length;
-  }
 
-};
-
-// This constructor should take parameters to give the Teacher properties their initial values. So for the Teacher class, we need parameters
+// PROTOTYPES STEP 1  This constructor should take parameters to give the Teacher properties their initial values. So for the Teacher class, we need parameters
 // for name, department, and maybe ratings (if you want to, we could also just add their ratings later with the addTeacherRating function, so
 // up to you). Then inside the Teacher Constructor function you need to set the teacher’s properties using this… like:
-
-
-
-
-var userReview = prompt('We would like for you to review your teacher. Please enter a rating between 0 - 5');
-
-    if  (userReview > 0 && userReview <= 5) {
-    alert('Thanks for you review! Your teacher now has an average rating of ' + teacher.getAvgRating(parseInt(userReview, 10)).toFixed(2));
-} else {
-   prompt('Please enter a rating between 0 - 5');
-}
+//
+// function Teacher() {
+//   this.name: name;
+//   this.department: department;
+//   this.teacher: teacher;
+//   this.semester: semester;
+// }
