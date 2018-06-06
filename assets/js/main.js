@@ -62,44 +62,44 @@ var courses = [
 // TODO 2: Create a function that filters course by departments//
 // This function should take 2 parameter a course array and a department. The function should return a new array filled with courses that are ONLY in the department specified in the parameter.
 // note: to test that this works… I would suggest calling the function and then console.log the result to make sure it is filtering as expected.
+// //
+// function findCourse() {
 //
-function findCourse() {
-
-	for (var i=0, len=courses.length; i < len; i++) {
-
-		if (courses[i][1] =='Communication') {
-			console.log('Communication: '+ courses[i][0]);
-
-		}
-
-		else if (courses[i][1] == 'Magic')  {
-
-			console.log('Magic: '+ courses[i][0]);
-
-		}
-    else if (courses[i][1] == 'History')  {
-
-      console.log('History: '+ courses[i][0]);
-
-    }
-    else if (courses[i][1] == 'Health')  {
-
-      console.log('Health: '+ courses[i][0]);
-
-    }
-    else if (courses[i][1] == 'Business')  {
-
-      console.log('Business: '+ courses[i][0]);
-
-    }
-    else  {
-    	console.log('Computer Science: '+ courses[i][0]);
-    }
-	}
-
-}
-
-console.log(findCourse());
+// 	for (var i=0, len=courses.length; i < len; i++) {
+//
+// 		if (courses[i][1] =='Communication') {
+// 			console.log('Communication: '+ courses[i][0]);
+//
+// 		}
+//
+// 		else if (courses[i][1] == 'Magic')  {
+//
+// 			console.log('Magic: '+ courses[i][0]);
+//
+// 		}
+//     else if (courses[i][1] == 'History')  {
+//
+//       console.log('History: '+ courses[i][0]);
+//
+//     }
+//     else if (courses[i][1] == 'Health')  {
+//
+//       console.log('Health: '+ courses[i][0]);
+//
+//     }
+//     else if (courses[i][1] == 'Business')  {
+//
+//       console.log('Business: '+ courses[i][0]);
+//
+//     }
+//     else  {
+//     	console.log('Computer Science: '+ courses[i][0]);
+//     }
+// 	}
+//
+// }
+//
+// console.log(findCourse());
 //
 //
 
@@ -356,23 +356,24 @@ function Teacher(name, department, teacher,semester) {
   this.department = department;
   this.teacher = teacher;
   this.semester = semester;
+  this.rating = rating;
 }
 
 Teacher.prototype.get  = function(userReview) {
-  this.rating.push(userReview);
+  rating.push(userReview);
         var sum = 0;
-          for (var i = 0; i < this.rating.length; i++) {
-          (sum = sum + this.rating[i]);
+          for (var i = 0; i < rating.length; i++) {
+          (sum = sum + rating[i]);
            }
            console.log(sum/this.rating.length);
         return sum / this.rating.length;
+        // this.rating.push(userReview);
+
 };
-Teacher.prototype.add = function(userReview){
-      this.rating.push(userReview);
-      addRating(userReview);
-    };
-
-
+// Teacher.prototype.add = function(userReview){
+//       this.rating.push(userReview);
+//       addRating(userReview);
+//     };
 
 // TODO STEP 2: Create new Teacher Instances
 var teacherSquid = new Teacher('Squidward', 'Business', 'Business Management', 'Winter', [4,4,3]);
@@ -380,14 +381,15 @@ var teacherMoss = new Teacher('Maurice Moss', 'Computer Science', 'Unexpected Re
 var teacherBlack = new Teacher('Bernard Black', 'English Lit', 'History of Screaming', 'Winter', [3,3,3]);
 //
 console.log(teacherSquid, teacherBlack, teacherMoss);
-// console.log(teacherSquid.get, teacherBlack.get());
+console.log(teacherSquid.get());
+// console.log(teacherBlack.get());
 
 
 // TODO STEP 3: Create Course Prototype
-
-function Course() {
-  this.courseClass = courseClass;
-  this.teacher = (TeacherInstance);
-  this.semester = semester;
-  this.department = department;
-}
+//
+// function Course() {
+//   this.courseClass = courseClass;
+//   this.teacher = (TeacherInstance);
+//   this.semester = semester;
+//   this.department = department;
+// }
