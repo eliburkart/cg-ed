@@ -350,46 +350,90 @@ var courses = [
 // for name, department, and maybe ratings (if you want to, we could also just add their ratings later with the addTeacherRating function, so
 // up to you). Then inside the Teacher Constructor function you need to set the teacher’s properties using this… like:
 //
-var userReview = prompt('We would like for you to review your teacher. Please enter a rating between 0 - 5');
-function Teacher(name, department, teacher,semester) {
-  this.name = name;
-  this.department = department;
-  this.teacher = teacher;
-  this.semester = semester;
-  this.rating = rating;
-}
-
-Teacher.prototype.get  = function(userReview) {
-  rating.push(userReview);
-        var sum = 0;
-          for (var i = 0; i < rating.length; i++) {
-          (sum = sum + rating[i]);
-           }
-           console.log(sum/this.rating.length);
-        return sum / this.rating.length;
-        // this.rating.push(userReview);
-
-};
-// Teacher.prototype.add = function(userReview){
-//       this.rating.push(userReview);
-//       addRating(userReview);
-//     };
-
-// TODO STEP 2: Create new Teacher Instances
-var teacherSquid = new Teacher('Squidward', 'Business', 'Business Management', 'Winter', [4,4,3]);
-var teacherMoss = new Teacher('Maurice Moss', 'Computer Science', 'Unexpected Rebooting', 'Winter', [1]);
-var teacherBlack = new Teacher('Bernard Black', 'English Lit', 'History of Screaming', 'Winter', [3,3,3]);
+// var userReview = prompt('We would like for you to review your teacher. Please enter a rating between 0 - 5');
+// function Teacher(name, department, teacher,semester) {
+//   this.name = name;
+//   this.department = department;
+//   this.teacher = teacher;
+//   this.semester = semester;
+//   this.rating = rating;
+// }
 //
-console.log(teacherSquid, teacherBlack, teacherMoss);
-console.log(teacherSquid.get());
+// Teacher.prototype.get  = function(userReview) {
+//   rating.push(userReview);
+//         var sum = 0;
+//           for (var i = 0; i < rating.length; i++) {
+//           (sum = sum + rating[i]);
+//            }
+//            console.log(sum/this.rating.length);
+//         return sum / this.rating.length;
+//         // this.rating.push(userReview);
+//
+// };
+// // Teacher.prototype.add = function(userReview){
+// //       this.rating.push(userReview);
+// //       addRating(userReview);
+// //     };
+//
+// // TODO STEP 2: Create new Teacher Instances
+// var teacherSquid = new Teacher('Squidward', 'Business', 'Business Management', 'Winter', [4,4,3]);
+// var teacherMoss = new Teacher('Maurice Moss', 'Computer Science', 'Unexpected Rebooting', 'Winter', [1]);
+// var teacherBlack = new Teacher('Bernard Black', 'English Lit', 'History of Screaming', 'Winter', [3,3,3]);
+// //
+// console.log(teacherSquid, teacherBlack, teacherMoss);
+// console.log(teacherSquid.get());
 // console.log(teacherBlack.get());
 
 
 // TODO STEP 3: Create Course Prototype
 //
-// function Course() {
-//   this.courseClass = courseClass;
-//   this.teacher = (TeacherInstance);
-//   this.semester = semester;
-//   this.department = department;
-// }
+function Course(courseClass, Semester, department) {
+  this.courseClass = courseClass;
+  // this.teacher = (TeacherInstance);
+  this.semester = semester;
+  this.department = department;
+}
+//is is bad practice to name this prototype the same as the function previously written
+Course.prototype.findCourse = function findCourse() {
+  for (var i = 0, len = courses.length; i < len; i++) {
+
+     if (courses[i][1] == 'Communication') {
+       console.log('Communication: ' + courses[i][0]);
+
+     } else if (courses[i][1] == 'Magic') {
+
+       console.log('Magic: ' + courses[i][0]);
+
+     } else if (courses[i][1] == 'History') {
+
+       console.log('History: ' + courses[i][0]);
+
+     } else if (courses[i][1] == 'Health') {
+
+       console.log('Health: ' + courses[i][0]);
+
+     } else if (courses[i][1] == 'Business') {
+
+       console.log('Business: ' + courses[i][0]);
+
+     } else {
+       console.log('Computer Science: ' + courses[i][0]);
+     }
+   }
+}
+console.log(findCourse( ));
+
+
+function filterByDepartment (department, courses) {
+  var matchingCourses = '' ;
+for (var i = 0, len = courses.length; i < len; i++) {
+  var aCourse = courses[i];
+  if (aCourse.department == department) {
+    matchingCourses += aCourse.name + ', ';
+  }
+}
+
+  return matchingCourses;
+}
+
+var resultOfFilterByDept = filterByDepartment('History', [course, course2, course3, course4]);

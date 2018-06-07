@@ -47,8 +47,8 @@
 // function addTeacherRating() {
 //   rating.push(userReview);
 // }
-  // addTeacherRating(userReview);
-  // console.log(rating);
+// addTeacherRating(userReview);
+// console.log(rating);
 
 //create a prompt that asks the user to review a teacher
 // var userReview = prompt('We would like for you to review your teacher. Please enter a rating between 0 - 5');
@@ -65,37 +65,31 @@
 //
 function findCourse() {
 
-	for (var i=0, len=courses.length; i < len; i++) {
+  for (var i = 0, len = courses.length; i < len; i++) {
 
-		if (courses[i][1] =='Communication') {
-			console.log('Communication: '+ courses[i][0]);
+    if (courses[i][1] == 'Communication') {
+      console.log('Communication: ' + courses[i][0]);
 
-		}
+    } else if (courses[i][1] == 'Magic') {
 
-		else if (courses[i][1] == 'Magic')  {
+      console.log('Magic: ' + courses[i][0]);
 
-			console.log('Magic: '+ courses[i][0]);
+    } else if (courses[i][1] == 'History') {
 
-		}
-    else if (courses[i][1] == 'History')  {
+      console.log('History: ' + courses[i][0]);
 
-      console.log('History: '+ courses[i][0]);
+    } else if (courses[i][1] == 'Health') {
 
+      console.log('Health: ' + courses[i][0]);
+
+    } else if (courses[i][1] == 'Business') {
+
+      console.log('Business: ' + courses[i][0]);
+
+    } else {
+      console.log('Computer Science: ' + courses[i][0]);
     }
-    else if (courses[i][1] == 'Health')  {
-
-      console.log('Health: '+ courses[i][0]);
-
-    }
-    else if (courses[i][1] == 'Business')  {
-
-      console.log('Business: '+ courses[i][0]);
-
-    }
-    else  {
-    	console.log('Computer Science: '+ courses[i][0]);
-    }
-	}
+  }
 
 }
 
@@ -216,8 +210,8 @@ var userYear = prompt('Enter graduation year, please');
 
 function welcomeStudent() {
 
-  if ((!(userMonth == 'May' || userMonth == 'December'))
-   || (userYear > 2026)) {
+  if ((!(userMonth == 'May' || userMonth == 'December')) ||
+    (userYear > 2026)) {
     alert('Try again!');
     return false;
   } {
@@ -257,9 +251,9 @@ var teacher = {
     return sum / rating.length;
   }
 
-  // ou now need to call your addRating property on your teacher object and only pass in the userRating.
+// ou now need to call your addRating property on your teacher object and only pass in the userRating.
 // Also test to make sure the addRating function is still working, along with the getAvgRating function by printing
- // out the avg rating before and after you add the new rating.
+// out the avg rating before and after you add the new rating.
 
 
 
@@ -267,76 +261,76 @@ var teacher = {
 
 
 
- var userReview = prompt('We would like for you to review your teacher. Please enter a rating between 0 - 5');
- var teacher = {
-     name: 'Squidward',
-     department: 'Business',
-     rating: [4.5,3.2,2.0,5],
+var userReview = prompt('We would like for you to review your teacher. Please enter a rating between 0 - 5');
+var teacher = {
+  name: 'Squidward',
+  department: 'Business',
+  rating: [4.5, 3.2, 2.0, 5],
 
-     // addRating: function(addTeacherRating){
-     // this.rating.push(userReview);
-       // },
-        addRating: function() {
-         this.rating.push(userReview);
-         // addTeacherRating(userReview);
-         // console.log(this.rating);
-       }
-       ,
+  // addRating: function(addTeacherRating){
+  // this.rating.push(userReview);
+  // },
+  addRating: function() {
+    this.rating.push(userReview);
+    // addTeacherRating(userReview);
+    // console.log(this.rating);
+  },
 
-     getAvgRating: function() {
-       // this.rating.push(userReview);
-       var sum = 0;
-         for (var i = 0; i < this.rating.length; i++) {
-         (sum += this.rating[i]);
-          }
-          // console.log(sum/this.rating.length);
-       return sum/this.rating.length;
-                 },
-
-
-     getRating: function() {
-       console.log(this.getAvgRating);
-         if  (userReview > 0 && userReview <= 5) {
-               alert('Thanks for you review! Your teacher now has an average rating of ' + getAvgRating(parseInt(userReview, 10)).toFixed(2));
-         } else {
-               prompt('Please enter a rating between 0 - 5');
-                   }
-                   console.log(this.getAvgRating);
+  getAvgRating: function() {
+    // this.rating.push(userReview);
+    var sum = 0;
+    for (var i = 0; i < this.rating.length; i++) {
+      (sum += this.rating[i]);
     }
- };
+    // console.log(sum/this.rating.length);
+    return sum / this.rating.length;
+  },
 
 
-
-
-
-
-
- var userReview = prompt('We would like for you to review your teacher. Please enter a rating between 0 - 5')
- function promptRating(userReview) {
-       if  ((userReview > 0) && (userReview <= 5)) {
-       alert('Thanks for you review! Your teacher now has an average rating of ' + getAvgRating(parseInt(userReview, 10)).toFixed(2));
-     } else {
+  getRating: function() {
+    console.log(this.getAvgRating);
+    if (userReview > 0 && userReview <= 5) {
+      alert('Thanks for you review! Your teacher now has an average rating of ' + getAvgRating(parseInt(userReview, 10)).toFixed(2));
+    } else {
       prompt('Please enter a rating between 0 - 5');
-      console.log(promptRating(getAvgRating));
-   }
- }
+    }
+    console.log(this.getAvgRating);
+  }
+};
 
- var teacher = {
-   teacherName: 'Squidward',
-   deptName: 'Business',
-   rating: [3.4, 5.0, 4.2],
-     getAvgRating: function() {
-       this.rating.push(userReview);
-       var sum = 0;
-         for (var i = 0; i < this.rating.length; i++) {
-         (sum += this.rating[i]);
-          }
-          console.log(sum/this.rating.length);
-       return sum/this.rating.length;
-     }
 
-     // addTeacherRating: function(userReview) {
-     //   this.rating.push(userReview);
-     //   console.log(this.rating);
-     // }
- }
+
+
+
+
+
+var userReview = prompt('We would like for you to review your teacher. Please enter a rating between 0 - 5')
+
+function promptRating(userReview) {
+  if ((userReview > 0) && (userReview <= 5)) {
+    alert('Thanks for you review! Your teacher now has an average rating of ' + getAvgRating(parseInt(userReview, 10)).toFixed(2));
+  } else {
+    prompt('Please enter a rating between 0 - 5');
+    console.log(promptRating(getAvgRating));
+  }
+}
+
+var teacher = {
+  teacherName: 'Squidward',
+  deptName: 'Business',
+  rating: [3.4, 5.0, 4.2],
+  getAvgRating: function() {
+    this.rating.push(userReview);
+    var sum = 0;
+    for (var i = 0; i < this.rating.length; i++) {
+      (sum += this.rating[i]);
+    }
+    console.log(sum / this.rating.length);
+    return sum / this.rating.length;
+  }
+
+  // addTeacherRating: function(userReview) {
+  //   this.rating.push(userReview);
+  //   console.log(this.rating);
+  // }
+}
