@@ -1,25 +1,25 @@
 
-var teacherName = ['Sally Jones', 'Squidward'];
-var deptName = ['Physics', 'Communication', 'English', 'Business'];
-var rating = [3.4, 5.0, 4.2];
-var avgRating = ((3.4 + 5.0 + 4.2)/3).toFixed(1);
-var students = ['Jessica Jones', 'Morris Moss', 'Bernard Black', 'Manny Bianco', 'Hermionie Grainger'];
-var courses = ['History', 'Art', 'Communications', 'Magic'];
-var GPA = [3.2, 4.0, 3.8, 4.0, 2];
-var semester = ['Winter 2017', 'Summer 2018', 'Fall 2018'];
-var courses = [
-    ['Roman History','History'],
-    ['Successful Negotiation', 'Communication'],
-    ['Improving CommunicationSkills', 'Communication'],
-    ['Teamwork Skills', 'Communication'],
-    ['Transcendental Meditation', 'Health'],
-    ['The Art of the Forced Unexpected Reboot', 'Computer Science'],
-    ['History of Tnetennba', 'Computer Sceience'],
-    ['Financial Accounting', 'Business'],
-    ['Managerial Economics', 'Business'],
-    ['Herbology', 'Magic'],
-    ['Charms and Potions', 'Magic']
-]
+// var teacherName = ['Sally Jones', 'Squidward'];
+// var deptName = ['Physics', 'Communication', 'English', 'Business'];
+// var rating = [3.4, 5.0, 4.2];
+// var avgRating = ((3.4 + 5.0 + 4.2)/3).toFixed(1);
+// var students = ['Jessica Jones', 'Morris Moss', 'Bernard Black', 'Manny Bianco', 'Hermionie Grainger'];
+// // var courses = ['History', 'Art', 'Communications', 'Magic'];
+// var GPA = [3.2, 4.0, 3.8, 4.0, 2];
+// var semester = ['Winter 2017', 'Summer 2018', 'Fall 2018'];
+// var courses = [
+//     ['Roman History','History'],
+//     ['Successful Negotiation', 'Communication'],
+//     ['Improving CommunicationSkills', 'Communication'],
+//     ['Teamwork Skills', 'Communication'],
+//     ['Transcendental Meditation', 'Health'],
+//     ['The Art of the Forced Unexpected Reboot', 'Computer Science'],
+//     ['History of Tnetennba', 'Computer Sceience'],
+//     ['Financial Accounting', 'Business'],
+//     ['Managerial Economics', 'Business'],
+//     ['Herbology', 'Magic'],
+//     ['Charms and Potions', 'Magic']
+// ]
 
 
 // console.log("Teacher: " + teacherName);
@@ -387,41 +387,86 @@ var courses = [
 
 // TODO STEP 3: Create Course Prototype
 //
-function Course(courseClass, Semester, department) {
-  this.courseClass = courseClass;
-  // this.teacher = (TeacherInstance);
-  this.semester = semester;
+// var semester = ['Winter 2017', 'Summer 2018', 'Fall 2018'];
+// var courses = [
+//
+//       // var romanHist =
+//     {
+//       course: 'Roman History',
+//       department: 'History',
+//       teacher: 'Manny Bianco',
+//       semester: 'Winter'
+//     },
+//
+//     // var negotiation =
+//     {
+//       course: 'Successful Negotiation',
+//       department: 'Communication',
+//       teacher: 'Jessica Jones',
+//       semester: 'Winter'
+//     },
+//     // var improvComm =
+//      {
+//       course: 'Improving Communication',
+//       department: 'Communication',
+//       teacher: 'Jessica Jones',
+//       sememster: 'Winter'
+//     },
+//
+//   // var teamSkill =
+//   {
+//     course: 'Teamwork Skills',
+//     department: 'Communication',
+//     teacher: 'Jessica Jones',
+//     semester: 'Winter'
+//   },
+//
+//     // var transMed =
+//     {
+//       course: 'Transcendental Meditation',
+//       department: 'Heatlh',
+//       teacher: 'Manny Bianco',
+//       semester: 'Winter'
+//     },
+//     // var forcedReboot =
+//     {
+//       course: 'The Art of the Forced Unexpected Reboot',
+//       department: 'Computer Science',
+//       teacher: "Maurice Moss",
+//       semester: 'Winter'
+//     },
+//     // var tnetennba =
+//     {
+//       course: 'History of Tnetennba',
+//       department: 'Computer Science',
+//       teacher: 'Maurice Moss',
+//       semester: 'Winter'
+//     }
+//
+//     // ['Financial Accounting', 'Business'],
+//     // ['Managerial Economics', 'Business'],
+//     // ['Herbology', 'Magic'],
+//     // ['Charms and Potions', 'Magic']
+// ];
+
+function Course(course, department, teacher, semester) {
+  this.course = course;
   this.department = department;
+  this.teacher = teacher;
+  this.semester = semester;
 }
+
+var courses = [[new Course('Roman History', 'History', 'Maurice Moss','Winter')],
+[new Course('History of Tnetennba','Computer Science','Maurice Moss','Winter')]
+]
+// var courseArr = [];
+// function courseList() {
+//   Course.push(Course);
+// }
 //is is bad practice to name this prototype the same as the function previously written
-Course.prototype.findCourse = function findCourse() {
-  for (var i = 0, len = courses.length; i < len; i++) {
-
-     if (courses[i][1] == 'Communication') {
-       console.log('Communication: ' + courses[i][0]);
-
-     } else if (courses[i][1] == 'Magic') {
-
-       console.log('Magic: ' + courses[i][0]);
-
-     } else if (courses[i][1] == 'History') {
-
-       console.log('History: ' + courses[i][0]);
-
-     } else if (courses[i][1] == 'Health') {
-
-       console.log('Health: ' + courses[i][0]);
-
-     } else if (courses[i][1] == 'Business') {
-
-       console.log('Business: ' + courses[i][0]);
-
-     } else {
-       console.log('Computer Science: ' + courses[i][0]);
-     }
-   }
-}
-console.log(findCourse( ));
+console.log("**********");
+console.log(courses.teacher);
+console.log(courses['teacher']);
 
 
 function filterByDepartment (department, courses) {
@@ -436,4 +481,5 @@ for (var i = 0, len = courses.length; i < len; i++) {
   return matchingCourses;
 }
 
-var resultOfFilterByDept = filterByDepartment('History', [course, course2, course3, course4]);
+var resultOfFilterByDept = filterByDepartment('History', courses);
+console.log(resultOfFilterByDept);
